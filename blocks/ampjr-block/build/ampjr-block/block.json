@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/ampjr-block",
+  "version": "0.1.0",
+  "title": "Ampjr Block",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "Ampjr Block is a custom block for the AMP Jr theme.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "slides": {
+      "type": "array",
+      "default": []
+    }
+  },
+  "textdomain": "ampjr-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

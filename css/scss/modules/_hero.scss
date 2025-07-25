@@ -1,0 +1,43 @@
+//** we could be Heroes  
+
+
+
+.hero {
+	padding-top: 3em;
+	padding-bottom: 3em;
+
+	@include breakpoint($medium) {
+		padding-top: 6em;
+		padding-bottom: 6em;
+	}
+
+	@include breakpoint($large) {
+		padding-top: 8em;
+		padding-bottom: 8em;
+	}
+}
+
+// Photo Background Hero
+.hero.photo {
+
+	background-position: center center;
+	background-size: cover;
+
+}
+
+
+
+.hero__contain {
+	@extend .blue-border;
+	@include grid-row();
+
+	h1.hero__title {
+		color: #fff;
+		margin: 0;
+	}
+}
+
+.hero__content {
+
+	@include grid-column(12);
+}

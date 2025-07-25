@@ -1,0 +1,34 @@
+// Helper Styles 
+
+
+.red-border {
+	border: 1px solid red !important;
+}
+
+.blue-border {
+	border: 1px solid blue !important;
+}
+
+.green-border {
+	border: 1px solid green !important;
+}
+
+.grey-border {
+	border: 1px solid $grey-3 !important;
+}
+
+
+header,
+footer {
+	@extend .grey-border;
+}
+
+nav {
+	// @extend .green-border;	
+}
+
+#content {
+	// 	@include grid-row(); 
+
+	// @extend .blue-border;
+}

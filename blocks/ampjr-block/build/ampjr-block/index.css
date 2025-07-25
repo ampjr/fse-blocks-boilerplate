@@ -1,0 +1,35 @@
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/ampjr-block/editor.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-ampjr-block {
+  border: 1px dashed #666;
+}
+
+.wp-block-create-block-ampjr-block .slick-prev,
+.wp-block-create-block-ampjr-block .slick-next {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+  z-index: 100;
+}
+.wp-block-create-block-ampjr-block .slick-prev:before,
+.wp-block-create-block-ampjr-block .slick-next:before {
+  font-family: "slick";
+  font-size: 46px;
+  line-height: 1;
+  opacity: 0.75;
+  color: #ccc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*# sourceMappingURL=index.css.map*/

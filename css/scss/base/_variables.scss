@@ -1,0 +1,44 @@
+/* Variables */
+
+// Fonts
+$serif: Georgia, serif;
+$sans: 'roboto', Helvetica, Arial, sans-serif;
+$sans-alt: 'roboto', Helvetica, Arial, sans-serif;
+$icon: 'ampjr-basic-icons';
+$cn-head: 'roboto', Helvetica, Arial, sans-serif;
+$cn-sub-head: Georgia, serif;
+$cn-body: 'roboto', Helvetica, Arial, sans-serif;
+
+// Colors
+$base: #f6f6f6;
+$contrast: #2e2e2e;
+
+$primary: #c81932;
+$secondary: #005288;
+
+$green: #059973;
+$green-2: #a2d4d1;
+$green-3: #59beb7;
+
+$blue: #005288;
+
+$grey: #f4f4f4;
+$grey-2: #e6e7e8;
+$grey-3: #a7a9ac;
+$grey-4: #3e3d39;
+$grey-5: #222220;
+
+// Buttons
+$btn-font: $cn-body;
+$btn-font-size: 1.375rem;
+$btn-text-color: $primary;
+$btn-hover-text-color: $secondary;
+
+// Breakpoints
+$xsmall: '(max-width: 22.5em)'; // 360
+$small: '(max-width: 40em)';
+$medium: '(min-width:40.063em)'; // 640
+$medium-only: '(min-width: 40.063em) and (max-width: 64em)';
+$large: '(min-width:64.063em)'; // 1024
+$xlarge: '(min-width:100.063em)'; // 1600
+$xxlarge: '(min-width:125.063em)'; // 2000

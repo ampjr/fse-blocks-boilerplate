@@ -1,0 +1,344 @@
+.top-info {
+	@extend .clearfix;
+	display: none;
+	position: absolute;
+	top: 5.5em;
+	width: 100%;
+	margin: 0;
+
+	p {
+		font-family: $sans-alt;
+		color: #fff;
+		font-size: 1em;
+		font-weight: 400;
+		text-align: center;
+		line-height: 1em;
+		text-transform: uppercase;
+	}
+
+	@include breakpoint($medium) {
+		top: 7.25em;
+		right: 1em;
+
+		p {
+			text-align: right;
+		}
+	}
+
+	@include breakpoint($large) {
+		display: block;
+		@include grid-column(7, $pull: 1);
+		position: relative;
+		top: 0;
+		margin: 1em 0 0 0;
+		float: right;
+
+		p {
+			font-size: 1.125em;
+			text-align: right;
+			color: $grey-3;
+		}
+	}
+
+	@include breakpoint($xlarge) {
+		@include grid-column(7, $pull: 0, $float: right);
+		margin-right: 5%;
+	}
+
+	@include breakpoint($xxlarge) {
+		margin-right: 0;
+	}
+}
+
+.hero {
+	.top-info {
+		display: none;
+		top: 2.25em;
+
+		@include breakpoint($medium) {
+			display: block;
+		}
+
+		@include breakpoint($large) {
+			display: none;
+		}
+	}
+}
+
+a {
+	color: $grey-2;
+}
+
+.tel {
+	@extend .show-for-small-only;
+	float: left;
+	font-size: 1.25em;
+}
+
+.menu-container {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 101%;
+	background: #cccccc;
+	width: 75px;
+	-webkit-box-shadow: -1px 0 10px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: -1px 0 10px 0 rgba(0, 0, 0, 0.25);
+
+	@include breakpoint($large) {
+		display: none;
+	}
+}
+
+.menu-toggle {
+	display: block;
+	left: 29%;
+	margin-top: -8px;
+	// margin: 0 auto;
+	@include vertical-align;
+
+	span.menu-text {
+		@extend .screen-reader-text
+	}
+
+	.bar1,
+	.bar2,
+	.bar3 {
+		display: block;
+		width: 32px;
+		height: 4px;
+		background-color: #fff;
+		margin: 8px 0;
+		transition: 0.4s;
+	}
+
+	/* Rotate first bar */
+	&.active .bar1 {
+		-webkit-transform: rotate(-45deg) translate(-9px, 8px);
+		transform: rotate(-45deg) translate(-9px, 8px);
+	}
+
+	/* Fade out the second bar */
+	&.active .bar2 {
+		opacity: 0;
+	}
+
+	/* Rotate last bar */
+	&.active .bar3 {
+		-webkit-transform: rotate(45deg) translate(-8px, -8px);
+		transform: rotate(45deg) translate(-8px, -8px);
+	}
+}
+
+.nav-gradient {
+	background: #dddddd;
+}
+
+.main-navigation {
+	display: none;
+	position: fixed;
+	top: 76px;
+	right: 0;
+	width: 100%;
+	height: 92%;
+	overflow: scroll;
+	padding: 3% 8%;
+	margin: 0 0 0 0;
+	list-style: none;
+	z-index: 2000;
+	background: #dddddd;
+
+	// @extend .nav-gradient; 
+
+	@include breakpoint($medium) {
+		top: 94px;
+		@include grid-column(9);
+		padding: 2% 2%;
+	}
+
+	@include breakpoint($large) {
+		display: block;
+		position: relative;
+		top: 0;
+		padding: 6px 6px;
+	}
+
+	.main-nav ul,
+	ul.main-nav {
+		display: block;
+		text-align: left;
+		padding: 0;
+		margin: 0;
+
+		li {
+			display: block;
+			border-bottom: 1px solid #fff;
+
+			@include breakpoint($large) {
+				display: inline-block;
+				border-bottom: none;
+			}
+
+			a {
+				display: inline-block;
+				position: relative;
+				padding-top: 0.5em;
+				padding-bottom: 0.5em;
+
+				margin-left: 1em;
+
+				font-family: $sans-alt;
+				line-height: .75em;
+				font-size: 1.25em;
+				font-weight: 800;
+				letter-spacing: 1px;
+				color: #000;
+				text-transform: uppercase;
+				-webkit-transition: color 0.3s ease-out;
+				transition: color 0.3s ease-out;
+
+				@include breakpoint($small) {
+					font-size: 1.25em;
+				}
+
+				@include breakpoint($xsmall) {
+					font-size: 1.125em;
+				}
+
+				@include breakpoint($medium) {
+					font-size: 1.625em;
+				}
+
+				@include breakpoint($large) {
+					font-size: 1.25em;
+				}
+
+				@include breakpoint($xlarge) {
+					font-size: 1.5em;
+				}
+			}
+
+			// a	
+			&:hover>a,
+			&.current_page_item>a {
+				color: $green;
+			}
+
+			&.menu-item-has-children a {
+				margin-left: 0;
+			}
+
+			&.menu-item-has-children::before {
+				content: '+';
+				font-family: $sans-alt;
+				line-height: .625em;
+				font-size: 1.825em;
+				font-weight: 800;
+				color: #000;
+				padding-right: .325em;
+				vertical-align: -10%;
+				display: inline-block;
+
+				@include breakpoint($medium) {
+					font-size: 2em;
+				}
+
+				@include breakpoint($large) {
+					font-size: 2.25em;
+				}
+			}
+
+			&.current_page_item.menu-item-has-children::before {
+				color: $green;
+			}
+
+			&.menu-item-has-children:hover::before {
+				color: $green;
+			}
+
+			// SubMenu 
+			ul {
+				display: none;
+				margin-top: -0.75em;
+				padding: 0 0 1em 2em;
+				z-index: 1;
+
+				&.active {
+					display: block;
+				}
+
+				li {
+					margin-bottom: .5em;
+					border-bottom: none;
+
+					&.menu-item-has-children::before {
+						font-size: 1.5em;
+
+						@include breakpoint($large) {
+							font-size: 1.75em;
+						}
+
+						// @include breakpoint($large)  { font-size: 1.75em;  }
+						// @include breakpoint($xlarge) { font-size: 1.925em;   }
+					}
+
+					a {
+						padding: .5em 0;
+						color: #000;
+						text-transform: none;
+						font-size: 1.0em;
+
+						@include breakpoint($medium) {
+							font-size: 1.125em;
+						}
+
+						@include breakpoint($large) {
+							font-size: 1.25em;
+						}
+
+						@include breakpoint($xlarge) {
+							font-size: 1.5em;
+						}
+					}
+				}
+
+				// Tertiary 
+				ul {
+					margin-top: 0;
+					padding-left: 2em;
+					padding-bottom: 0;
+					z-index: 2;
+
+					li {
+						margin-bottom: 0;
+					}
+
+					a {
+						color: #000;
+						font-size: .975em;
+
+						@include breakpoint($medium) {
+							font-size: 1.0em;
+						}
+
+						@include breakpoint($large) {
+							font-size: 1.125em;
+						}
+
+						@include breakpoint($xlarge) {
+							font-size: 1.25em;
+						}
+					}
+				}
+			}
+
+		}
+
+		// li 
+
+	}
+
+	// .main-nav 
+}
+
+// .nav-frist

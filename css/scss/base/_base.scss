@@ -1,0 +1,148 @@
+/* Base */
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
+	text-rendering: optimizeLegibility !important;
+	font-family: $serif;
+	background-color: #FFF;
+	// color: ;
+}
+
+body::before {
+	/* never visible - this is used in jQuery to check the current MQ */
+	content: 'mobile';
+	display: none;
+}
+
+@media only screen and (min-width: 1050px) {
+	body::before {
+		/* never visible - this is used in jQuery to check the current MQ */
+		content: 'desktop';
+	}
+}
+
+::selection {
+	background-color: $green;
+	color: #FFF;
+}
+
+::-moz-selection {
+	background-color: $green;
+	color: #FFF;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+	//color: $blue;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:focus {
+	outline: none;
+}
+
+::-webkit-input-placeholder {
+	//color: rgba($black, 0.7);
+}
+
+:-moz-placeholder {
+	/* Firefox 18- */
+	//color: rgba($black, 0.7);
+}
+
+::-moz-placeholder {
+	/* Firefox 19+ */
+	//color: rgba($black, 0.7);
+}
+
+:-ms-input-placeholder {
+	//color: rgba($black, 0.7);
+}
+
+/* Link transitions */
+
+a,
+a:visited,
+a:hover,
+a span,
+a:visited span,
+a:hover span,
+a b,
+a:visited b,
+a:hover b,
+a:before,
+a:after,
+a:hover:before,
+a:hover:after,
+a h3,
+a:hover h3,
+span,
+span:hover,
+h2,
+h2:hover,
+figure,
+figcaption,
+button,
+button:hover,
+input,
+input:hover,
+div,
+li ul,
+li:hover ul,
+img {
+	-webkit-transition: color 0.1s linear, background-color 0.1s linear, border-color 0.1s linear, box-shadow 0.1s linear, opacity 0.1s linear, background-position 0.1s linear, left 0.1s linear, right 0.1s linear, filter 0.2s linear, -webkit-filter 0.2s linear, margin 0.2s linear;
+	transition: color 0.1s linear, background-color 0.1s linear, border-color 0.1s linear, box-shadow 0.1s linear, opacity 0.1s linear, background-position 0.1s linear, left 0.1s linear, right 0.1s linear, filter 0.2s linear, -webkit-filter 0.2s linear, margin 0.2s linear;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.row {
+	display: flex;
+	// max-width: 1480px;
+
+    @media (max-width:991px) {
+		display: block;
+	}
+}
+
+.clear {
+	clear: both;
+}
+
+sup {
+	top: -0.4em;
+	font-size: 65%;
+}

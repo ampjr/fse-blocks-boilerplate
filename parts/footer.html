@@ -1,0 +1,11 @@
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">&copy; Amp Jr's Awesome WordPress Site</p>
+<p class="has-text-align-center">
+  Current Date: <span id="current-date-footer">Date</span>
+</p>
+<!-- /wp:paragraph -->
+
+<script>
+  document.getElementById('current-date-footer').innerText =
+    new Date().toLocaleDateString()
+</script>

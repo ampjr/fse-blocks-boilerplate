@@ -1,0 +1,51 @@
+// Header Styles
+
+header.site-header {
+  top: 0;
+  width: 100%;
+  position: relative;
+  background-color: $base;
+  // -webkit-box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.33);
+  // box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.33);
+  z-index: 1000;
+  padding: 2em 0;
+
+  @include breakpoint($large) {
+    padding: 4em 0;
+  }
+}
+
+.logo-container {
+  @include grid-column(10);
+
+  @include breakpoint($xsmall) {
+    @include grid-column(9);
+  }
+
+  @include breakpoint($medium) {
+    @include grid-column(3);
+  }
+}
+
+.logo {
+  display: block;
+  width: 257px;
+  height: 46px;
+  text-indent: -100em;
+  margin: 0;
+  background-image: url('../images/Logo_Black.png');
+  background-image: url('../images/Logo_Black.svg');
+  background-position: 0 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  // border: 1px solid red;
+
+  @include breakpoint($small) {
+    width: 100%;
+  }
+}
+
+.logo.icon-logo-full {
+  text-align: right;
+  padding-right: 6%;
+}

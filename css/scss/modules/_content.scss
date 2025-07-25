@@ -1,0 +1,253 @@
+// Content Styles
+body {
+  color: $grey-4;
+  font-family: $sans;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $sans;
+  font-weight: 400;
+  text-transform: none;
+  // letter-spacing: -2px;
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-family: $serif;
+  font-size: 3em;
+
+  @include breakpoint($medium) {
+    font-size: 4em;
+  }
+
+  @include breakpoint($large) {
+    font-size: 4.6875em; // 75px
+  }
+
+  @include breakpoint($xlarge) {
+    font-size: 4.75em;
+  }
+}
+
+h2 {
+  font-family: $serif;
+  font-size: 2.5em;
+
+  @include breakpoint($medium) {
+    font-size: 3em;
+  }
+
+  @include breakpoint($large) {
+    font-size: 3.4375em; // 55px
+  }
+
+  @include breakpoint($xlarge) {
+    font-size: 3.625em;
+  }
+}
+
+h3 {
+  font-size: 2.5em;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  @include breakpoint($medium) {
+    font-size: 3em;
+  }
+
+  @include breakpoint($large) {
+    font-size: 3.4375em; // 55px
+  }
+
+  @include breakpoint($xlarge) {
+    font-size: 3.625em;
+  }
+}
+
+h4 {
+  font-size: 1.5em;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $green;
+
+  @include breakpoint($medium) {
+    font-size: 1.675em;
+  }
+
+  @include breakpoint($large) {
+    font-size: 1.875em; // 30px
+  }
+
+  @include breakpoint($xlarge) {
+    font-size: 2em;
+  }
+}
+
+h5 {
+  font-size: 1.125em;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  @include breakpoint($medium) {
+    font-size: 1.25em;
+  }
+
+  @include breakpoint($large) {
+    font-size: 1.5em; // 24px
+  }
+
+  @include breakpoint($xlarge) {
+    font-size: 1.75em;
+  }
+}
+
+h6 {
+  font-size: 0.925em;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  @include breakpoint($medium) {
+    font-size: 1em;
+  }
+
+  @include breakpoint($large) {
+    font-size: 1.125em; // 18px
+  }
+
+  @include breakpoint($xlarge) {
+    font-size: 1.25em;
+  }
+}
+
+p,
+a,
+li {
+  font-size: 1em;
+  line-height: 1.425em;
+
+  @include breakpoint($large) {
+    font-size: 1.125em; // 18px
+  }
+  @include breakpoint($xlarge) {
+    font-size: 1.25em;
+  }
+}
+
+a {
+  font-family: $sans;
+  font-weight: 500;
+  color: $primary;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $secondary;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: $secondary;
+    transition: width 0.3s ease;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+
+  // @include red-glow-transition;
+
+  // &:hover {
+  //   color: $secondary;
+  //   box-shadow: 0 0 16px 4px rgba(255, 0, 0, 0.8);
+  // }
+}
+
+// Screen Reader Only
+.screen-reader-text,
+.show-for-sr,
+.show-on-focus {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.contain {
+  @include grid-row();
+}
+
+#content {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  // padding-top: 6em;
+
+  // @include breakpoint($large) {
+  // 	padding-top: 10em;
+  // }
+}
+
+.entry-content {
+  // @extend .green-border;
+  // @include grid-row();
+
+  // padding: 6% 6%;
+  position: relative;
+}
+
+// SAMPLE
+// SAMPLE
+// SAMPLE
+/*
+.custom-row-class { 
+	@include grid-row(); 
+	.custom-column-class { 
+		@include grid-column(12); 
+	} 
+}
+.custom-grid-class {
+  @include grid-column(
+    // Control the number of columns
+    $columns:4,
+    // Specify whether or not this is the last column in the row
+    $last-column:true,
+    // Choose whether or not to center this column
+    $center:true,
+    // Choose the number of columns to offset this element by
+    $offset:3,
+    // Specify how many columns to push this element past
+    $push:3,
+    // Specify how many columns to pull this element past
+    $pull:9,
+    // Set to true to remove column padding
+    $collapse:true,
+    // Specify the float direction
+    $float:right
+  );
+}
+.SAMPLE {
+	font-size: 1.75em;
+	
+	@include breakpoint($medium) {
+		font-size: 2.0em;
+  	}
+	@include breakpoint($large) {
+		font-size: 2.25em;
+	}
+}
+*/

@@ -1,0 +1,21 @@
+// Footer Styles
+
+footer {
+  padding: 2em 0;
+  background-color: $base;
+  color: $primary;
+  letter-spacing: 2px;
+
+  @include breakpoint($large) {
+    padding: 4em 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+    }
+  }
+}
