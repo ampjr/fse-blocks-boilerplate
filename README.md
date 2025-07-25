@@ -4,9 +4,11 @@
 
 This is a boilerplate theme with full-site editing (FSE) and slider block for WordPress.
 
+Rather than having random bits of code, I thought it would be best to showcase the various requirements by rolling them all into a starter theme. Just download, install, & activate. Enjoy!
+
 ## Approach
 
-- **index.html**: The main template file for WordPress full-site editing.
+- **index.html**: The main template file for WordPress FSE. Plus a few others to get you started building.
 
 - **footer.html**: uses JS to display the current date.
 
